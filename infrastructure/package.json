@@ -8,7 +8,10 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "format": "biome format --write ./app",
+    "check": "biome check --apply ./app",
+    "check-unsafe": "biome check --apply-unsafe ./app"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
@@ -21,6 +24,7 @@
   },
   "dependencies": {
     "@aws-cdk/aws-lambda-python-alpha": "^2.126.0-alpha.0",
+    "@biomejs/biome": "^1.4.1",
     "aws-cdk-lib": "2.126.0",
     "constructs": "^10.0.0",
     "source-map-support": "^0.5.21"
